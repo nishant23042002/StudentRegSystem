@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Spliting the container into two parts 1 for students-info and 2nd for student details  */
+#split-container{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    gap: 0 2px;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto;
+    grid-template-areas: "header header"
+    "main main2"
+    "main main2"
+    "main main2";
+}
+
+#header{
+    grid-area: header;
+    place-items: center;
+    align-content: center;
+    background-color: red;
+    border: 5px solid black;
+}
+
+#main{
+    grid-area: main;
+    place-items: center;
+    align-content: center;
+    background-color: aquamarine;
+    border: 5px solid black;
+}
+#main2{
+    grid-area: main2;
+    place-items: center;
+    align-content: center;
+    background-color: pink;
+    border: 5px solid black;
+}
+
+
+
+
+/* styling for the left side section */
+#student-details{
+    height: 50vh;
+    width: 30vw;
+    border: 2px solid black;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+form input{
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+form label{
+    margin-bottom: 5px;
+}
+#register-btn{
+    width: 100%;
+    text-align: center;
+}
+#register-btn input{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* styling for right side section */
+.static-content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    padding: 4px 0;
+}
+/* .static-content h3{
+    width: 100%;
+} */
+#reg_students{
+    min-height: 40vh;
+    width: 50vw;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* styling for dynamically added elements */
+.newPara{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.newDiv{
+    height: 60px;
+    width: 100%;
+    border: 2px solid black;
+    margin: 15px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
