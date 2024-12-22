@@ -1,4 +1,7 @@
 # StudentRegSystem
+GitHub link for the assignment - https://github.com/nishant23042002/StudentRegSystem
+
+
 A student Registration System
 This Student Registration System is a web application that allows users to register students by providing their name, ID, email, and contact details. The system includes the following functionalities:
 1. Add Student: Users can input student details in the form fields and register them. The data is displayed dynamically on the page and stored in the browser's local storage for persistence, even after a page refresh.
