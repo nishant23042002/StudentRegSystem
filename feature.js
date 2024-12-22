@@ -67,7 +67,6 @@ function displayStudent(student) {
     userId.classList.add("newPara");
     userId.innerHTML = student.id;
     divCreated.appendChild(userId);
-    // inputId.value = '';
 
 
     //for student_email
@@ -75,16 +74,52 @@ function displayStudent(student) {
     userEmail.classList.add("newPara")
     userEmail.innerHTML = student.email;
     divCreated.appendChild(userEmail)
-    // inputEmail.value = '';
 
 
     const userContact = document.createElement("p");
     userContact.classList.add("newPara")
     userContact.innerHTML = student.contact;
     divCreated.appendChild(userContact)
-    // inputContact.value = '';
+
+
+
+    //Edit Delete button
+    const editButton = document.createElement("button");
+    editButton.classList.add("btn")
+    editButton.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>'
+    divCreated.appendChild(editButton);
+    editButton.addEventListener("click", ()=>editStudent(student, divCreated));
+
+    const delButton = document.createElement("button");
+    delButton.classList.add("btn2")
+    delButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>'
+    divCreated.appendChild(delButton)
+    delButton.addEventListener("click", ()=>deleteItem(student, divCreated));
+
     // adding the content to the main div 
     studentRecord.appendChild(divCreated);
+}
+
+// Edit Delete functionality
+function editStudent(student, divCreated){
+    inputName.value = student.name;
+    inputId.value = student.id;
+    inputEmail.value = student.email;
+    inputContact.value = student.contact;
+    deleteItem(student, divCreated);
+}
+
+
+
+
+
+
+
+function deleteItem(student, divCreated){
+    divCreated.remove();
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+    students = students.filter(s => s.id !== student.id);
+    localStorage.setItem("students", JSON.stringify(students))
 }
 
 function saveToLocalStorage(student) {

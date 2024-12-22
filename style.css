@@ -36,19 +36,19 @@
 }
 #main2{
     grid-area: main2;
-    place-items: center;
-    align-content: center;
     background-color: pink;
     border: 5px solid black;
 }
-
+#main2 h1{
+    text-align: center;
+}
 
 
 
 /* styling for the left side section */
 #student-details{
     height: 50vh;
-    width: 30vw;
+    width: auto;
     border: 2px solid black;
     flex-direction: column;
     padding: 20px;
@@ -88,23 +88,22 @@ form label{
 
 /* styling for right side section */
 .static-content{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
     border-bottom: 2px solid black;
     padding: 4px 0;
 }
-/* .static-content h3{
-    width: 100%;
-} */
+.static-content h3{
+    width: 200px;
+    display: inline-block;
+}
+
 #reg_students{
     min-height: 40vh;
-    width: 50vw;
+    width: auto;
     border: 2px solid black;
     border-radius: 20px;
     padding: 10px;
     display: flex;
-    flex-direction: column;
+    margin: 10px;
 }
 
 
@@ -124,11 +123,31 @@ form label{
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
+    padding: 5px;
 }
 
 
-
-
+.btn{
+    padding: 10px;
+    background-color: green;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    width: 60px;
+}
+.btn2{
+    background-color: red;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 60px;
+}
+#flexDiv{
+    width: 100%;
+}
 
 
 

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Student Registration System">
     <meta name="keywords" content="College, School, Student Enrollment, Student-Records">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>Student Registration System</title>
 </head>
@@ -12,8 +14,8 @@
 <body>
 
     <div id="container">
-        
-        
+
+
         <div id="split-container">
             <header id="header">
                 <h1 class="heading">Student Registration System</h1>
@@ -23,7 +25,7 @@
                 <div id="student-details">
                     <form action="#">
                         <label for="student_name">Student Name : </label>
-                        <input type="text" id="student_name" maxlength="25"/>
+                        <input type="text" id="student_name" maxlength="25" />
 
                         <label for="student_id">Student Id : </label>
                         <input type="number" id="student_id" required>
@@ -34,27 +36,30 @@
                         <label for="student_contact_no">Student Contact No. : </label>
                         <input type="tel" id="student_contact_no" maxlength="10" required>
 
-                    
+
                         <div id="register-btn">
                             <input type="submit" name="submit" id="student_register">
                         </div>
                     </form>
-                    
+
 
                 </div>
             </main>
-    
-    
+
+
             <main id="main2">
                 <h1>Student Records</h1>
                 <div id="reg_students">
-                    <div class="static-content">
-                        <h3>Name</h3>
-                        <h3>Id</h3>
-                        <h3>Email</h3>
-                        <h3>Phone Number </h3>
-                    </div>
-                    <div class="name">
+                    <div id="flexDiv">
+                        <div class="static-content">
+                            <h3>Name</h3>
+                            <h3>Id</h3>
+                            <h3>Email</h3>
+                            <h3 style="text-align: center;">Phone Number </h3>
+                        </div>
+                        <div class="name">
+
+                        </div>
 
                     </div>
                 </div>
@@ -62,7 +67,7 @@
         </div>
 
     </div>
-    
+
 
 
 
@@ -79,4 +84,5 @@
 
     <script src="./feature.js"></script>
 </body>
+
 </html>
