@@ -3,13 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: #219ebc;
+}
 
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    cursor: pointer;
+    background-color: #023047;
+}
 
 /* Spliting the container into two parts 1 for students-info and 2nd for student details  */
 #split-container{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: grid;
+    border: 2px solid #8ecae6;
     gap: 0 2px;
     grid-template-rows: auto auto auto auto;
     grid-template-columns: auto auto;
@@ -23,36 +34,41 @@
     grid-area: header;
     place-items: center;
     align-content: center;
-    background-color: red;
-    border: 5px solid black;
+    background-color: #023047;
+    color: white;
 }
 
 #main{
     grid-area: main;
     place-items: center;
     align-content: center;
-    background-color: aquamarine;
-    border: 5px solid black;
+    background-color: #219ebc;
+}
+#main  h1{
+    color: #023047;
 }
 #main2{
     grid-area: main2;
-    background-color: pink;
-    border: 5px solid black;
+    place-content: center;
+    background-color: #8ecae6;
+    padding: 20px;
 }
 #main2 h1{
     text-align: center;
+    color: #023047;
 }
 
 
 
 /* styling for the left side section */
 #student-details{
-    height: 50vh;
-    width: auto;
-    border: 2px solid black;
+    min-height: 50vh;
+    width: 25vw;
+    border: 2px solid #023047;
     flex-direction: column;
     padding: 20px;
     border-radius: 20px;
+    background-color: #8ecae6;
 }
 form{
     display: flex;
@@ -76,9 +92,14 @@ form label{
     text-align: center;
 }
 #register-btn input{
-    background-color: blue;
+    background-color: #023047;
     color: white;
     cursor: pointer;
+    transition: .5s ease-in-out;
+}
+#register-btn input:hover{
+    transform: scale(1.1);
+    background-color: green;
 }
 
 
@@ -88,22 +109,25 @@ form label{
 
 /* styling for right side section */
 .static-content{
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #023047;
     padding: 4px 0;
 }
 .static-content h3{
     width: 200px;
     display: inline-block;
+    text-align: center;
 }
 
 #reg_students{
-    min-height: 40vh;
-    width: auto;
-    border: 2px solid black;
-    border-radius: 20px;
+    max-height: 70vh;
+    overflow: auto;
+    width: 60vw;
+    border: 2px solid #023047;
+    background-color: #219ebc;
+    border-radius: 5px;
     padding: 10px;
     display: flex;
-    margin: 10px;
+    /* margin: 10px; */
 }
 
 
@@ -111,36 +135,43 @@ form label{
 /* styling for dynamically added elements */
 .newPara{
     height: 100%;
-    display: flex;
-    align-items: center;
     text-align: center;
+    align-content: center;
+    font-size: 20px;
+    width: 200px;
+}
+.name .newDiv:nth-of-type(even){
+    background-color: #fb8500;
 }
 .newDiv{
-    height: 60px;
-    width: 100%;
-    border: 2px solid black;
+    height: 80px;
+    width: 90%;
+    border: 2px solid #023047;
+    background-color: #ffb703;
     margin: 15px 0;
     border-radius: 5px;
     display: flex;
-    justify-content: space-between;
     padding: 5px;
+    flex-wrap: wrap;
 }
-
 
 .btn{
     padding: 10px;
-    background-color: green;
+    background-color: #023047;
     border-radius: 5px;
+    border: none;
     font-size: 20px;
     color: white;
     cursor: pointer;
     width: 60px;
+    margin: 0 10px;
 }
 .btn2{
-    background-color: red;
+    background-color: #023047;
     border-radius: 5px;
+    border: none;
     font-size: 20px;
-    color: white;
+    color: red;
     cursor: pointer;
     padding: 10px;
     width: 60px;
